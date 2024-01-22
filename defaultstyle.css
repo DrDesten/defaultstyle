@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
+    --border-rad: 0.15rem;
+
+    --snap-ease: cubic-bezier(.25, 0, 0, 1);
+
+
+    /* Forms & Buttons */
+    --input-margin: 0.2em;
+    --input-padding: 0.15em;
+    --input-bg: var(--bg-c);
+}
+
+/* Light Mode */
+:root {
     --bg-c: white;
     --bg-c2a: hsl(202, 30%, 26%);
     --bg-c2b: hsl(261, 33%, 26%);
@@ -22,21 +35,38 @@
     --text-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
     --text-shadow-l: 0 0 0.4em rgba(0, 0, 0, 0.1);
     --text-shadow-d: 0 0 0.4em rgba(0, 0, 0, 0.75);
+}
 
-    --border-rad: 0.15rem;
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-c: rgb(10, 10, 12);
+        --bg-c2a: hsl(202, 30%, 26%);
+        --bg-c2b: hsl(261, 33%, 26%);
+        --bg-c2: linear-gradient(165deg, var(--bg-c2a) 0%, var(--bg-c2b) 100%);
+        --gb-c2-trans: linear-gradient(215deg, rgba(47, 73, 88, 0.55) 0%, rgba(62, 49, 97, 0.7) 100%);
 
-    --snap-ease: cubic-bezier(.25, 0, 0, 1);
+        --text-dark: rgb(255, 255, 255);
+        --text-dark2: var(--bg-c2b);
+        --text-light: var(--bg-c);
 
+        --text-dark-a: var(--bg-c2b);
+        --text-light-a: #f8d977;
 
-    /* Forms & Buttons */
-    --input-margin: 0.2em;
-    --input-padding: 0.15em;
-    --input-bg: var(--bg-c);
+        --ele-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+        --ele-shadow-l: 0 0 2rem rgba(0, 0, 0, 0.1);
+        --ele-shadow-d: 0 0 2rem rgba(0, 0, 0, 0.5);
+
+        --text-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
+        --text-shadow-l: 0 0 0.4em rgba(0, 0, 0, 0.1);
+        --text-shadow-d: 0 0 0.4em rgba(0, 0, 0, 0.75);
+    }
 }
 
 body {
     font-family: "Rubik", sans-serif;
     color: var(--text-dark);
+    background-color: var(--bg-c);
 
     padding: 0px 2rem;
     /* Backup */
@@ -168,12 +198,14 @@ table {
     padding: 0;
     width: 100%;
 }
+
 table tr {
     margin: 0;
     padding: 0;
     width: 100%;
 }
-table tr > td {
+
+table tr>td {
     margin: 0;
     padding: 0;
     vertical-align: middle;
