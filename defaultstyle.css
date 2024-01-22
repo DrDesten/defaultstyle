@@ -3,9 +3,7 @@
 
 :root {
     --border-rad: 0.15rem;
-
     --snap-ease: cubic-bezier(.25, 0, 0, 1);
-
 
     /* Forms & Buttons */
     --input-margin: 0.2em;
