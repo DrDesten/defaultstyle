@@ -75,17 +75,21 @@ body {
 }
 
 
-a {
+a,
+.a {
     text-decoration: inherit;
     color: inherit;
 }
 
 a:hover,
-a:focus {
+a:focus,
+.a:hover,
+.a:focus {
     font-weight: bold;
 }
 
-h1 {
+h1,
+.h1 {
     font-size: 9vw;
     /* Backup */
     font-size: min(9vw, 6.5rem);
@@ -94,7 +98,8 @@ h1 {
     margin: 0.25em 0;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 1.5rem;
     /* Backup */
     font-size: clamp(1rem, 5vw, 1.5rem);
@@ -102,20 +107,25 @@ h2 {
     color: var(--text-dark2);
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 2rem;
     /* Backup */
     font-size: clamp(1.5rem, 6vw, 2rem);
     font-weight: normal;
 }
 
-section {
+section,
+.section {
     border-radius: var(--border-rad);
 }
 
 button,
+.button,
 input,
-textarea {
+.input,
+textarea,
+.textarea {
     font-size: inherit;
     font-family: inherit;
 
