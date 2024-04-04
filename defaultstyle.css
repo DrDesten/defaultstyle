@@ -89,6 +89,21 @@ a:focus,
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: block;
+}
+
+h1,
 .h1 {
     font-size: 9vw;
     /* Backup */
@@ -113,6 +128,16 @@ h3,
     /* Backup */
     font-size: clamp(1.5rem, 6vw, 2rem);
     font-weight: normal;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 section,
